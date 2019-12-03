@@ -1,6 +1,11 @@
+# V_obs = V_ast + alpha * V_RFI + eta
+raw:
+    input_dir: /data/RFI_Data
+    output_dir: ./data/processed
+    eta: 0.017 # noise per visibility pixel in Janskys
+    alpha: 0.1 # RFI amplitude
+    
 augmentation:
-    step_degrees: 10
-    inp_dir: ./data
-    flip: True
-other:
-    use_anonymous: yes
+    alpha: 0.1  # [0.05, 0.1, 0.2, 0.4]
+    eta: 0.017 # [0.017, 0.034]
+    flip: False
