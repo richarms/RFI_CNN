@@ -3,9 +3,11 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import tensorflow as tf
 import numpy as np
 import h5py as h5
+import yaml
 
 # load config from etl_config.yml
-import etl_config as ecfg
+with open("etl_config.yml", 'r') as ymlfile:
+    ecfg = yaml.load(ymlfile)
 
 # open the h5 file
 with h5.File(ecfg.raw['input_dir'], 'r') as fp:
