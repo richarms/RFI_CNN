@@ -4,7 +4,7 @@ import tensorflow as tf
 import numpy as np
 import h5py as h5
 
-# load config from etl_config.py
+# load config from etl_config.yml
 import etl_config as ecfg
 
 # open the h5 file
