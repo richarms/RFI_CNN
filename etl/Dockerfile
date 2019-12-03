@@ -1,5 +1,5 @@
 LABEL maintainer="Richard Armstrong <richarms@ska.ac.za>"
-FROM tensorflow/tensorflow:2.0.0-gpu-py3
+FROM tensorflow/tensorflow:2.0.0-gpu-py3-jupyter
 
 RUN apt-get update \
     && apt-get install -y git
@@ -11,4 +11,4 @@ RUN pip3 install --upgrade pip && \
 RUN git clone https://github.com/richarms/RFI_CNN.git
 
 WORKDIR /tf
-ENTRYPOINT python /train/models/train_model.py
+#ENTRYPOINT python /train/models/train_model.py
