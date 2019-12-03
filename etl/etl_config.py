@@ -1,4 +1,3 @@
-
 # V_obs = V_ast + alpha * V_RFI + eta
 raw:
     input_dir: /data/RFI_Data
