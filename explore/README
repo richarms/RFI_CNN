@@ -1,1 +1,2 @@
 docker build -t <username>/tensorflow:nightly-gpu-py3-jupyter-explore .
+docker run -it --rm --runtime=nvidia -p 8900:8888 -u $(id -u):$(id -g) -v /data/RFI_Data:/data <username>/tensorflow:nightly-gpu-py3-jupyter
