@@ -15,8 +15,8 @@ RUN chown -R $(id -u):$(id -g) /tf
 
 RUN git clone https://github.com/richarms/RFI_CNN.git
 
-RUN git clone https://github.com/ChihebTrabelsi/deep_complex_networks.git && cd deep_complex_networks && \
-    pip install .
+#RUN git clone https://github.com/ChihebTrabelsi/deep_complex_networks.git && cd deep_complex_networks && \
+#    pip install .
 
 
 
