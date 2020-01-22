@@ -1,4 +1,5 @@
-FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+#FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+FROM tensorflow/tensorflow:1.14.0-gpu-py3-jupyter
 LABEL maintainer="Richard Armstrong <richarms@ska.ac.za>"
 
 RUN apt-get update \
