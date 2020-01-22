@@ -6,12 +6,11 @@ RUN apt-get update \
     && apt-get install -y git \
     && apt-get install -y cmake libncurses5-dev libncursesw5-dev git cuda-nvml-dev-10-2
     
-RUN git clone https://github.com/Syllo/nvtop.git \
-    && mkdir -p nvtop/build \
-    && cd nvtop/build \
-    && cmake -DNVML_RETRIEVE_HEADER_ONLINE=True .. \
-    && make \
-    && make install
+#RUN git clone https://github.com/Syllo/nvtop.git \
+#    && mkdir -p nvtop/build \
+#    && cd nvtop/build
+#    && cmake -DNVML_RETRIEVE_HEADER_ONLINE=True .. \
+#    && make && make install
 
 RUN pip3 install --upgrade pip \
     && pip3 install --no-cache-dir h5py keras Theano kerosene keras-complex \
