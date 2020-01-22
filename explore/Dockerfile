@@ -1,5 +1,5 @@
 #FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
-FROM tensorflow/tensorflow:1.14.0-gpu-py3-jupyter
+FROM tensorflow/tensorflow:1.15.0-gpu-py3-jupyter
 LABEL maintainer="Richard Armstrong <richarms@ska.ac.za>"
 
 RUN apt-get update \
@@ -10,7 +10,6 @@ RUN git clone https://github.com/Syllo/nvtop.git \
     && mkdir -p nvtop/build \
     && cd nvtop/build \
     && cmake ..
-
 
 RUN pip3 install --upgrade pip \
     && pip3 install --no-cache-dir h5py keras Theano kerosene keras-complex \
