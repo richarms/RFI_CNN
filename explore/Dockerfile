@@ -9,7 +9,9 @@ RUN apt-get update \
 RUN git clone https://github.com/Syllo/nvtop.git \
     && mkdir -p nvtop/build \
     && cd nvtop/build \
-    && cmake ..
+    && cmake -DNVML_RETRIEVE_HEADER_ONLINE=True .. \
+    && make \
+    && make install
 
 RUN pip3 install --upgrade pip \
     && pip3 install --no-cache-dir h5py keras Theano kerosene keras-complex \
